@@ -1,0 +1,23 @@
+{% extends "MySite/base.html" %}
+
+{% load static%}
+
+{% block content %}
+
+<section id="15" class="container galeria">
+    <div class="container">
+        <div class="row">
+            {% for prensa in prensa %}
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" >
+                        <p><img src="{{prensa.imagen.url}}"></p>
+                        <h2>{{prensa.titulo}}</h2>
+                        <p>{{prensa.contenido}}</p>
+                    </div>        
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

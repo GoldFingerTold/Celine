@@ -1,0 +1,17 @@
+{% extends "MySite/base.html" %}
+
+{% load static%}
+
+{% block content %}
+
+    {% for news in news %}
+     <div> 
+        <p>
+            <h2>{{news.titulo}}</h2>
+            <h2>{{news.contenido}}</h2>
+            <p><img src="{{news.imagen.url}}"></p>
+        </p>
+     </div>
+    {% endfor %}
+
+{% endblock %}
